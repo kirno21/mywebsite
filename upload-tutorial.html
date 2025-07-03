@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Membuat Hosting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: blue; 
+            color: white; 
+            text-align: center; 
+            padding: 10px 0; 
+            position: relative; 
+            bottom: 0; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tutorial Membuat Hosting</h1>
+
+<p>Github pages adalah layanan hosting gratis dari Github, yang dapat digunakan untuk menyimpan website code statis. Bagi Anda yang ingin mengubah URL Github pages ke nama domain sendiri, Anda bisa melakukan custom domain. Pada panduan ini, kami akan berbagi cara custom domain Github dengan mudah.</p>
+
+<h2>Apa itu Github Pages</h2>
+<p>Github pages adalah salah satu layanan dari Github yang dapat digunakan untuk membuat atau menyimpan website statis. Yang dimaksud dengan website statis adalah halaman web yang tidak memerlukan server-side code, namun hanya menampilkan website dengan query pemrograman seperti cukup dengan client-side language seperti HTML, CSS, dan Javascript.</p>
+
+<p>Apabila Anda sudah memiliki website di Github pages, Anda dapat melakukan setting custom domain agar URL website Anda bisa diakses dengan nama domain Anda sendiri.</p>
+
+<h2>Cara Custom Domain Github</h2>
+<p>Berikut cara custom domain ke Github Page dari Rumahweb.</p>
+
+<h3>Step 1. Siapkan Github Pages</h3>
+<ol>
+    <li>Login ke <a href="https://github.com/" target="_blank">Github.com</a></li>
+    <li>Masuk ke Repository yang ingin di custom domain</li>
+    <li>Pada halaman Repository silahkan pilih menu <strong>Settings</strong></li>
+<img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/2-masuk-setting-github.png" alt="Setting Repository Github" class="image" style="width: 50%;">
+    <li>Untuk mengaktifkan Github Pages pada repository, masuk ke menu <strong>Pages</strong></li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/3-masuk-setting-pages.png" alt="Masuk menu Pages Github" class="image" style="width: 50%;">
+    <li>Selanjutnya sesuaikan <strong>Source</strong> dan <strong>Branch</strong>:
+        <ul>
+            <li><strong>Source</strong>: Deploy From a Branch</li>
+            <li><strong>Branch</strong>: Main, Root</li>
+        </ul>
+    </li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/4-setting-branch-save.png" alt="Mengaktifkan Github Pages pada Repository" class="image" style="width: 50%;">
+    <li>Setelah selesai, pilih <strong>Save</strong> untuk menyimpan.</li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/5-setting-custom-domain-save.png" alt="Custom domain Github Pages" class="image" style="width: 50%;">
+    <li>Setelah selesai, nantinya akan tampil URL Github Pages Anda.</li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/7-URL-sebelum-deploy.png" alt="Github Pages sudah aktif" class="image" style="width: 50%;">
+    <li>Untuk merubah domain <em>namarepository.github.io</em> menjadi nama domain Anda, silahkan masukkan nama domain pada kolom <strong>Custom Domain</strong>, dan simpan.</li>
+</ol>
+
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/6-notif-github.png" alt="Hasil URL Github Pages" class="image" style="width: 50%;" >
+
+<h1>Cara Custom Domain Github Pages Dengan Mudah</h1>
+
+<h2>Step 2. Setting DNS pada Domain</h2>
+<p>Setidaknya ada 3 cara untuk setting DNS di Rumahweb, yaitu melalui cPanel, Plesk panel, dan Clientzone. Cara setting DNS ini disesuaikan dengan layanan yang Anda pesan. Berikut opsi dan penjelasannya.</p>
+<h3>Setting DNS via cPanel (untuk pengguna Shared/Cloud hosting)</h3>
+<p>Tahapan ini digunakan jika Anda menggunakan layanan Shared Hosting, Unlimited Hosting, atau Cloud hosting. Berikut setting DNS domain ke Github melalui cPanel:</p>
+
+<ol>
+    <li>Login ke cPanel melalui <code>namadomain/cpanel</code></li>
+    <li>Setelah login ke cPanel, masuk ke menu <strong>Zone Editor</strong></li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/1-masuk-zone-edit.png" alt="Masuk Zone Editor cPanel hosting" class="image" style="width: 50%;">
+    <li>Pilih <strong>Manage</strong> pada domain yang ingin di custom ke Github Pages</li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/2-manage-zone-edit.png" alt="Manage DNS Domain cPanel" class="image" style="width: 50%;">
+    <li>Hapus dua Record DNS domain utama dan juga sub domain www.</li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/3-delete-dns.png" alt="Delete record DNS cPanel" class="image" style="width: 50%;">
+    <li>Selanjutnya buat A record dengan cara pilih <strong>Add Record</strong>, dan lengkapi detail DNS seperti berikut:
+        <ul>
+            <li><strong>Name</strong>: Nama Domain Anda</li>
+            <li><strong>TTL</strong>: 14400</li>
+            <li><strong>Type</strong>: A</li>
+            <li><strong>Record</strong>: 185.199.108.153</li>
+        </ul>
+    </li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/4-add-A-record-dns.png" alt="Menambahkan A record cPanel" class="image" style="width: 50%;">
+    <li>Buat kembali DNS Type A dengan isian Record IP berikut:
+        <ul>
+            <li>185.199.109.153</li>
+            <li>185.199.110.153</li>
+            <li>185.199.111.153</li>
+        </ul>
+    </li>
+    <li>Setelah itu buat Record DNS dengan Type CNAME dengan ketentuan berikut:
+        <ul>
+            <li><strong>Name</strong>: www.namadomainanda.com</li>
+            <li><strong>TTL</strong>: 14400</li>
+            <li><strong>Type</strong>: CNAME</li>
+            <li><strong>Record</strong>: urlgithubpage.github.io</li>
+        </ul>
+    </li>
+    <img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/5-add-cname.png" alt="Menambahkan DNS Record CNAME cPanel" class="image" style="width: 50%;">
+</ol>
+
+<p>Setelah selesai, akan ada 5 Record seperti gambar berikut:</p>
+<img src="https://www.rumahweb.com/journal/wp-content/uploads/2022/09/6-total-record-dns-cname.png" alt="Hasil Record DNS Github Pages cPanel" class="image" style="width: 50%;">
+<p>Sampai tahap ini setting custom domain ke Github sudah selesai. Setting memerlukan proses propagasi DNS kurang lebih 1-24 jam. Setelah proses propagasi selesai, Github Pages sudah bisa Anda akses dengan nama domain.</p>
+
+<p>Demikian cara custom domain Github Pages di Rumahweb, semoga bermanfaat.</p>
+         </div>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>&copy; 2025 Sukirno - Universitas Pamulang. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
